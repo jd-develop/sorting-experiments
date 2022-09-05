@@ -7,9 +7,13 @@ def bubble_sort(target_list: list[int | float]):
     target_list_ = target_list.copy()
 
     for sorted_count in range(len(target_list_)):
+        swapped = False
         for i in range(len(target_list_) - sorted_count - 1):
             if target_list_[i] > target_list_[i+1]:
                 target_list_[i], target_list_[i + 1] = target_list_[i + 1], target_list_[i]
+                swapped = True
+        if not swapped:  # the list is sorted
+            break
     return target_list_
 
 
