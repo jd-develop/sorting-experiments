@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
+import random
+
+
+def bubble_sort(target_list: list[int | float]):
+    target_list_ = target_list.copy()
+
+    for sorted_count in range(len(target_list_)):
+        for i in range(len(target_list_) - sorted_count - 1):
+            if target_list_[i] > target_list_[i+1]:
+                target_list_[i], target_list_[i + 1] = target_list_[i + 1], target_list_[i]
+    return target_list_
+
+
+list_to_sort = [random.randint(-100, 100) for a in range(random.randint(5, 10))]
+print(list_to_sort)
+
+sorted_ = bubble_sort(list_to_sort)
+print(sorted_)
