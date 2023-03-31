@@ -29,9 +29,10 @@ def selection_sort_fast(target_list: list[int | float]):
     return target_list_
 
 
-length = random.randint(5, 10)
-# length = 3000
+# length = random.randint(5, 10)
+length = 100
 list_to_sort = [random.randint(-1000, 9999) for a in range(length)]
+list_to_sort.insert(random.choice(list_to_sort), random.randint(0, len(list_to_sort)-1))
 print(list_to_sort)
 
 sorted_ = selection_sort(list_to_sort)
@@ -40,3 +41,5 @@ print(sorted_)
 fast_sorted = selection_sort_fast(list_to_sort)
 print(fast_sorted)
 print(sorted_ == fast_sorted)
+
+assert sorted_ == fast_sorted == sorted(list_to_sort)

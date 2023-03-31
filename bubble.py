@@ -17,9 +17,12 @@ def bubble_sort(target_list: list[int | float]):
     return target_list_
 
 
-length = random.randint(5, 10)
+# length = random.randint(5, 10)
+length = 100
 list_to_sort = [random.randint(-100, 100) for a in range(length)]
 print(list_to_sort)
 
 sorted_ = bubble_sort(list_to_sort)
 print(sorted_)
+
+assert sorted_ == sorted(list_to_sort)
