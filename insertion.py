@@ -7,7 +7,10 @@ def insertion_sort(target_list: list[int | float]):
     target_list_ = target_list.copy()
 
     for i in range(1, len(target_list_)):
-        if target_list_[i] < target_list_
+        j = i
+        while j > 0 and target_list_[j-1] > target_list_[j]:
+            target_list_[j], target_list_[j-1] = target_list_[j-1], target_list_[j]
+            j -= 1
 
     return target_list_
 
