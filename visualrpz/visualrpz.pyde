@@ -1,9 +1,9 @@
 from random import shuffle, randint
 
 # Things you can change 
-mode = ["LINEAR", "RANDOMIZED"][randint(0, 1)]
+mode = ["LINEAR", "RANDOMIZED"][0]
 lenght = 50
-algorithm = ["bubble", "selection", "insertion", "bozo"][randint(0, 2)]
+algorithm = ["bubble", "selection", "insertion", "bozo"][0]
 framerate = 100
 colors = True
 
